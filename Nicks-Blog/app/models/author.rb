@@ -1,8 +1,12 @@
 class Author < ActiveRecord::Base
   
+  devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
+  
   has_many :posts
 
-  attr_accessible :first_name, :last_name, :email, :address, :city, :state, :zip, :about_me, :company, :post_count, :last_post
+  attr_accessible :first_name, :last_name, :email, :address, :city, :state, :zip, :about_me, :company, :post_count, :last_post, :password, :password_confirmation, :remember_me
+  
+  validates :first_name, :last_name, :email, presence: true
   
   # full name of author
   def full_name
