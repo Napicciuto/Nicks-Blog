@@ -1,16 +1,22 @@
 <div id="header">
-	<div class="top-menu">
-
-		<% if author_signed_in? %>
-	    <%= "Signed in as #{current_author.full_name}. Not you?" %>
-	    <%= link_to 'Sign out', destroy_author_session_path, :method => :delete %>
-	 My Account 
-	  	<% else %>
-	    <%= link_to 'Sign in', new_author_session_path %>
-		<%= link_to "Sign Up", sign_up_path %>
-	  <%- end %>
-
+	
+	<%= link_to "/" do %>
+		<%= image_tag "logo-placeholder.png", class: "logo-img" %>
+	<% end %>
+	
+	<div class="top-menu right">
+			<%= link_to 'HOME', "/" %> | <%= link_to 'ABOUT US', "#" %> | <%= link_to "CONTACT US", "#" %> 
+		<div class="user-area right">
+			<% if author_signed_in? %>
+	    		<%#= "Signed in as #{current_author.full_name}. Not you?" %>
+	    		<%= link_to 'Sign out', destroy_author_session_path, :method => :delete %> | My Account 
+	  		<% else %>
+	    		<%= link_to 'SIGN IN', new_author_session_path %> or
+				<%= link_to "REGISTER", sign_up_path %>
+	  		<% end %>
+		</div>
 	</div>
+	<div class="clear"></div>
 	<div class="main-menu">
 		all | something | something2 | something |
 	</div>

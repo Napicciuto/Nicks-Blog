@@ -11,3 +11,46 @@
  *= require_self
  *= require_tree .
  */
+
+@import "header";
+@import "footer";
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #CCC;
+	font-family: arial
+}
+.top-border {
+	height: 5px;
+	background: #444;
+}
+.alert {
+	padding: 10px;
+	background: #444;
+	color: #FFF;
+}
+
+a {				
+	text-decoration: none;
+}
+
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+.clear {
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
