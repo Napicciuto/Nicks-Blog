@@ -5,8 +5,9 @@ NicksBlog::Application.routes.draw do
    
   ActiveAdmin.routes(self)
     
+  # Devise Users
   devise_for :admin_users, ActiveAdmin::Devise.config
-  devise_for :author #, path: "/author", controllers: { sessions: "sessions"}
+  devise_for :author, :path => "auth", :path_names => { :sign_in => 'login', :password => 'secret', :confirmation => 'verification', :registration => 'register', :sign_up => 'cmon_let_me_in' }
   
   # Account Signup Routes
   match '/sign_up' => 'authors#new'

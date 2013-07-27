@@ -1,6 +1,15 @@
 <div id="header">
 	<div class="top-menu">
-		Sign IU | My Account | 
+
+		<% if author_signed_in? %>
+	    <%= "Signed in as #{current_author.full_name}. Not you?" %>
+	    <%= link_to 'Sign out', destroy_author_session_path, :method => :delete %>
+	 My Account 
+	  	<% else %>
+	    <%= link_to 'Sign in', new_author_session_path %>
+		<%= link_to "Sign Up", sign_up_path %>
+	  <%- end %>
+
 	</div>
 	<div class="main-menu">
 		all | something | something2 | something |
