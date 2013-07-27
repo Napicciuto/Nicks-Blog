@@ -9,7 +9,7 @@
 		<div class="user-area right">
 			<% if author_signed_in? %>
 	    		<%#= "Signed in as #{current_author.full_name}. Not you?" %>
-	    		<%= link_to 'Sign out', destroy_author_session_path, :method => :delete %> | My Account 
+	    		<%= link_to 'SIGN OUT', destroy_author_session_path, :method => :delete %> | PROFILE 
 	  		<% else %>
 	    		<%= link_to 'SIGN IN', new_author_session_path %> or
 				<%= link_to "REGISTER", sign_up_path %>
@@ -18,6 +18,9 @@
 	</div>
 	<div class="clear"></div>
 	<div class="main-menu">
-		all | something | something2 | something |
+		<%= link_to 'HOME', "/" %>
+		<% Category.all.each do |menu| %>
+			| <%= link_to menu.name.upcase, "#" %>
+		<% end %>
 	</div>
 </div>
