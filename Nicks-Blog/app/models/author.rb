@@ -17,7 +17,7 @@ class Author < ActiveRecord::Base
   # date for last post auther made
   # TO-DO ~ poke user to post more via mailer 
   def last_post
-    posts.last.created_at
+    posts.last.created_at rescue "No Posts"
   end
   
   # count all post author made

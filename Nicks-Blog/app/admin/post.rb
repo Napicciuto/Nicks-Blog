@@ -5,6 +5,7 @@ ActiveAdmin.register Post do
   index do
     selectable_column
     column :title
+    column :category
     column :author
     column :comment_count
     column :created_at
