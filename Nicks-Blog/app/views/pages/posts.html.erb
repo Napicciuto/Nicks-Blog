@@ -1,0 +1,32 @@
+<!-- Display post and all comments after -->
+<div class="post-wrapper">
+	<!-- Post title in h1 for SEO -->
+	<h1><%= @posts.title %></h1>
+	<div class="post-info">
+		<%= image_tag "missing.jpg", class: "left" %>
+		<div class="author-info">
+			Author: <%= @posts.author.full_name %><br />
+			Date: <%= @posts.created_at %><br /><br />
+			<%= @posts.body %>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<h2>Comments</h2>
+	<div class="comment">
+		<ul>
+			<% @posts.author_comments.each do |c| %>
+				<li>
+					<%= c.body %>
+				</li>
+			<% end %>
+		</ul>
+		<!-- Allow user o add comments -->
+		<%= form_for [:admin, @new_comment], url: user_comment_create_url  do |t| %>
+		<%= t.hidden_field :post_id, value: @posts.id %>
+		<%= t.text_area :body %><br />
+		<%= t.submit "Comment" %>
+		<% end %>
+	</div>
+</div>
+
+

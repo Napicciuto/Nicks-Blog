@@ -15,6 +15,11 @@ NicksBlog::Application.routes.draw do
   
   # Pages
   match '/thanks' => 'pages#thanks', as: 'thanks'
+  get '/categories/:category_id' => 'pages#categories' , as: 'read_category_list'
+  get '/posts/:post_id' => 'pages#posts' , as: 'read_post'
+  match '/posts/comment_create' => 'pages#comment_create' , as: 'user_comment_create'
+  match '/categories/post_create' => 'pages#post_create' , as: 'user_post_create'
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

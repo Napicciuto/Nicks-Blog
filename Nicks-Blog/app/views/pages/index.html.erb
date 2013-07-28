@@ -1,1 +1,26 @@
-Home Page
+<div id="home-page">
+	
+	<!-- Select 3 favorite typic -->
+	<!-- Make the typics 3 random -->
+	<div class="top-picks">
+		<% @categories.each do |tp| %>
+			<!-- Links to categories -->
+			<div class="top-category left">
+				<%= link_to read_category_list_path(tp) do %>
+					<%= image_tag "missing.jpg" %>
+				<% end %>	
+				<div class="clear"></div>
+				<%= link_to tp.name, read_category_list_path(tp) %>
+			</div>
+		
+		<% end %>
+	</div>
+	<div class="clear"></div>
+	<!-- 2 Slider -->
+	<div class="slider">
+		<%= image_tag "slider-holder.jpg" %>
+	</div>
+	
+	
+</div>
+<div class="clear"></div>

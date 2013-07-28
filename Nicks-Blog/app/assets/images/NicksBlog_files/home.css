@@ -1,0 +1,22 @@
+/* line 2, ../../app/assets/stylesheets/home.css.scss */
+#home-page .slider {
+  background: #444;
+  width: 950px;
+  height: 400px;
+  margin: 30px auto;
+}
+/* line 7, ../../app/assets/stylesheets/home.css.scss */
+#home-page .slider img {
+  width: 600px;
+}
+/* line 11, ../../app/assets/stylesheets/home.css.scss */
+#home-page .top-picks {
+  width: 960px;
+  height: 320px;
+  margin: 30px auto;
+}
+/* line 15, ../../app/assets/stylesheets/home.css.scss */
+#home-page .top-picks img {
+  width: 300px;
+  padding-right: 20px;
+}

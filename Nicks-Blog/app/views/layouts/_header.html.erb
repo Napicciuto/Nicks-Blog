@@ -20,7 +20,7 @@
 	<div class="main-menu">
 		<%= link_to 'HOME', "/" %>
 		<% Category.all.each do |menu| %>
-			| <%= link_to menu.name.upcase, "#" %>
+			| <%= link_to menu.name.upcase, read_category_list_path(menu) %>
 		<% end %>
 	</div>
 </div>

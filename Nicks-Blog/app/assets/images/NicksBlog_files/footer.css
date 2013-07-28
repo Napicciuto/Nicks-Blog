@@ -1,0 +1,59 @@
+/* line 1, ../../app/assets/stylesheets/footer.css.scss */
+.share {
+  margin-right: 60px;
+}
+/* line 4, ../../app/assets/stylesheets/footer.css.scss */
+.share ul {
+  list-style: none outside none;
+}
+/* line 8, ../../app/assets/stylesheets/footer.css.scss */
+.share li {
+  background-image: url("/assets/bg-share-icons.png");
+  background-repeat: no-repeat;
+  float: right;
+  height: 32px;
+  margin-right: 10px;
+  overflow: hidden;
+  text-indent: -345em;
+  width: 32px;
+}
+/* line 19, ../../app/assets/stylesheets/footer.css.scss */
+.share .facebook {
+  background-position: -32px -32px;
+}
+/* line 20, ../../app/assets/stylesheets/footer.css.scss */
+.share .facebook:hover {
+  background-position: -32px 0;
+}
+/* line 22, ../../app/assets/stylesheets/footer.css.scss */
+.share .twitter {
+  background-position: 0 -32px;
+}
+/* line 23, ../../app/assets/stylesheets/footer.css.scss */
+.share .twitter:hover {
+  background-position: 0 0;
+}
+/* line 25, ../../app/assets/stylesheets/footer.css.scss */
+.share .google {
+  background-position: -64px -32px;
+}
+/* line 26, ../../app/assets/stylesheets/footer.css.scss */
+.share .google:hover {
+  background-position: -64px 0;
+}
+/* line 28, ../../app/assets/stylesheets/footer.css.scss */
+.share .pinterest {
+  background-position: -96px -32px;
+}
+/* line 29, ../../app/assets/stylesheets/footer.css.scss */
+.share .pinterest:hover {
+  background-position: -96px 0;
+}
+/* line 31, ../../app/assets/stylesheets/footer.css.scss */
+.share .rss {
+  background-position: -128px -32px;
+}
+/* line 32, ../../app/assets/stylesheets/footer.css.scss */
+.share .rss:hover {
+  background-position: -128px 0;
+}
