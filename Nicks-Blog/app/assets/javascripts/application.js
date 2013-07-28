@@ -13,3 +13,38 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(function(){
+	//alert("js is working!")
+	
+	// Slider
+	var slider = {
+		startNum : document.getElementById('slider-num').innerHTML,
+		counter : 0,
+		count : function() {
+			if(this.counter == this.startNum){
+				this.counter = 0;	
+			} else {
+				this.counter++;
+			}	
+			return this.counter;	
+		}
+	
+	};
+	
+
+	setInterval(function(){
+		var count = slider.count();
+		var slide = $(".slider ul li");
+		
+		slide.each(function(index){
+			if(index == count) {
+				$(this).addClass("active");
+			} else {
+				$(this).removeClass("active");
+			}			
+		});
+		console.info(count);
+	}, 4000);
+});

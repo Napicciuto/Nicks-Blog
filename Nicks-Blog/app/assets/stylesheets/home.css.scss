@@ -18,3 +18,34 @@
 		}
 	}
 }
+
+.slider {
+
+	padding-top: 1px; 
+	#slider-num {
+		display:none;
+	}
+	ul {
+	
+		list-style: none;
+		height: 375px;
+		width: 620px;
+		overflow: hidden;
+		li {
+		position:absolute;
+			display:none;
+			
+			span {
+				position:absolute;
+				height: 100px;
+				width: 100%;
+				top: 350px;
+				left: 10px;
+				opacity: 0.45
+			}
+		}
+		li.active {
+			display:block;
+		}
+	}
+}
