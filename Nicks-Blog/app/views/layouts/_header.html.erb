@@ -5,7 +5,7 @@
 	<% end %>
 	
 	<div class="top-menu right">
-			<%= link_to 'HOME', "/" %> | <%= link_to 'ABOUT US', "#" %> | <%= link_to "CONTACT US", "#" %> 
+			<%= link_to 'HOME', "/" %> | <%= link_to 'ABOUT US', about_us_path %> | <%= link_to "CONTACT US", contact_us_path %> 
 		<div class="user-area right">
 			<% if author_signed_in? %>
 	    		<%#= "Signed in as #{current_author.full_name}. Not you?" %>
@@ -15,7 +15,30 @@
 				<%= link_to "REGISTER", sign_up_path %>
 	  		<% end %>
 		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<div class="share">
+				<ul>
+					<li class="twitter">
+						<a target="_blank" href="#">Twitter</a>
+					</li>
+					<li class="facebook">
+						<a target="_blank" href="#">Facebook</a>
+					</li>
+					<li class="google">
+						<a target="_blank" href="#">Google</a>
+					</li>
+					<li class="pinterest">
+						<a target="_blank" href="#">Pinterest</a>
+					</li>
+					<li class="rss">
+						<a target="_blank" href="#">rss</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
+	
 	<div class="clear"></div>
 	<div class="main-menu">
 		<%= link_to 'HOME', "/" %>
