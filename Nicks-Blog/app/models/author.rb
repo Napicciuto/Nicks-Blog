@@ -3,7 +3,7 @@ class Author < ActiveRecord::Base
   
   devise :database_authenticatable, :recoverable, :rememberable, :validatable
   
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
   attr_accessible :first_name, :last_name, :email, :address, :city, :state, :zip, :about_me, :company, :post_count, :last_post, :password, :password_confirmation, :remember_me
   

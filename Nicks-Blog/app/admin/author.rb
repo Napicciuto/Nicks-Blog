@@ -13,5 +13,22 @@ ActiveAdmin.register Author do
     default_actions
   end
   
+  form partial: "form"
+  
+   show full_name: proc { resource.full_name } do
+    panel "Contact Request" do
+      attributes_table_for resource do
+        row(:full_name)
+        row(:email) { mail_to resource.email, resource.email }
+        row(:address)
+        row(:city)
+        row(:state)
+        row(:zip)
+        row(:created_at)
+        row(:updated_at)
+      end
+    end
+  end
+  
 end
 
