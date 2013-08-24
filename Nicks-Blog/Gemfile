@@ -22,6 +22,9 @@ end
 # data
 gem 'mysql2'
 
+# seeding data helpers
+gem 'faker'
+
 # TO-DO
 # Deploy with Capistrano
 # gem 'capistrano'
