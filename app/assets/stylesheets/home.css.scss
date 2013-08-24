@@ -1,0 +1,51 @@
+#home-page {
+	.slider {
+		background:#444;
+		width: 950px;
+		height: 400px;
+		margin: 30px auto;		
+		img {
+			width: 600px;
+		}
+	}
+	.top-picks{
+		width: 960px;
+		height: 320px;
+		margin: 30px auto;
+		img {
+			width: 300px;
+			padding-right:20px;
+		}
+	}
+}
+
+.slider {
+
+	padding-top: 1px; 
+	#slider-num {
+		display:none;
+	}
+	ul {
+	
+		list-style: none;
+		height: 375px;
+		width: 620px;
+		overflow: hidden;
+		li {
+		position:absolute;
+			display:none;
+			
+			span {
+				position:absolute;
+				height: 100px;
+				width: 100%;
+				top: 350px;
+				left: 10px;
+				opacity: 0.45
+			}
+		}
+		li.active {
+			display:block;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+<%= semantic_form_for [:admin, @author] do |f| %>
+	<%= f.inputs "Page Information" do %>
+		<%= f.input :first_name %>
+		<%= f.input :last_name %>
+		<%= f.input	:email %>
+		<%= f.input :address %>
+		<%= f.input :city %>
+		<%= f.input :state %>
+		<%= f.input :zip %>
+		<%= f.input :about_me %>
+		<%= f.input :company %>
+		<%= f.input :password %>
+		<%= f.input :password_confirmation %>
+	<% end %>
+	<%= f.submit %>
+
+<% end %>

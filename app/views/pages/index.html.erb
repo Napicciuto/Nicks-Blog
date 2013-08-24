@@ -1,0 +1,35 @@
+<div id="home-page">
+	
+	<!-- Select 3 favorite typic -->
+	<!-- Make the typics 3 random -->
+	<div class="top-picks">
+		<% @categories.each do |tp| %>
+			<!-- Links to categories -->
+			<div class="top-category left">
+				<%= link_to read_category_list_path(tp) do %>
+					<%= image_tag "missing.jpg" %>
+				<% end %>	
+				<div class="clear"></div>
+				<%= link_to tp.name, read_category_list_path(tp) %>
+			</div>
+		
+		<% end %>
+	</div>
+	<div class="clear"></div>
+	<!-- TO-DO add to CMS -->
+	<!-- 2 Slider : 1 slide and 2 fade -->
+	<div class="slider">
+		<div id="slider-num">4</div>
+		<ul>
+		<% (0..4).each_with_index do |i, sld| %>
+			<li class='<%= "box#{i}" %> <%= "active" if i == 0  %>'>
+				<%= image_tag "slider-holder.jpg" %>
+				<span><%= "THIS ITS THE DESC FOR SLIDER: #{sld}" %></span>
+			</li>
+		<% end %>
+		</ul>
+	</div>
+	<!-- Slider 2 Here -->
+	
+</div>
+<div class="clear"></div>
