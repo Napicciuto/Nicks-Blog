@@ -25,6 +25,9 @@ NicksBlog::Application.routes.draw do
   match '/about_us' => 'pages#about_us' , as: 'about_us'
   match '/contact_us' => 'pages#contact_us' , as: 'contact_us'
   
+  # api controllers
+  match '/api/:action(.:format)', to: 'api'
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
