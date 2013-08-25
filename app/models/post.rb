@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   
   attr_accessible :title, :body, :author_id, :category_id
   
-  validates :category, presence: true
+  validates :title, :category, presence: true
   
   
   def comment_count

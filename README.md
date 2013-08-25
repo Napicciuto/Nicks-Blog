@@ -11,7 +11,13 @@ https://github.com/napicciuto
     $ bundle exec rake db:migrate
     $ bundle exec rake blog:loader
     
-
+### Unit testing set up
+	$ bundle exec rake db:test:prepare 
+	$ bundle exec rake db:migrate
+	$ bundle exec rake db:test:load  
+    
+### Run all unit tests
+    $ bundle exec rake test:units 
 
 #### Instruction 
 
